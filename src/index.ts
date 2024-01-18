@@ -9,7 +9,11 @@ import 'dotenv/config'
 
     try {       
         app.use(BodyParser.json());
-        app.use("/", router);          
+        app.use("/", router);
+        
+        app.get('/', (req: any, res: any) => {
+            res.send("data");
+        });
 
         // Custom code
         app.listen(process.env.SERVER_PORT, () => {
