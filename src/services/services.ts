@@ -1,7 +1,7 @@
-export const data = async(req: any, res: any) => {
+export const data = async() => {
     try {        
-       console.log('base !');
-       res.send("ciaooo");
+       console.log('base !!!');
+       return("ciaooo !!");
     } catch(err:any) {        
         console.log(err.message);
     }
