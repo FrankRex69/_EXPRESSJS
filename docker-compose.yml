@@ -1,17 +1,12 @@
-version: '3.7'
-
+version: '3.4'
 services:
-  ts-node-docker:
+  app:
+    image: '${IMAGE}'
     build:
-      context: .
-      dockerfile: Dockerfile
-      target: local
-    volumes:
-      - ./src:/app/src
-      - ./nodemon.json:/app/nodemon.json
-    container_name: ts-node-docker
-    expose:
-      - '3777'
+      context: ./
+      target: '${TARGET}'
+    entrypoint: bash -c '${COMMAND}'
     ports:
-      - '3777:4000'
-    command: npm run start-dev
+      - 3777:4000
+    volumes:
+      - './:/app'

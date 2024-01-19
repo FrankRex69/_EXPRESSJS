@@ -13,4 +13,4 @@ RUN npm install
 
 # Copy all files from current folder
 # inside our image in the folder `/app`
-COPY ./src ./app/src
+COPY . /app

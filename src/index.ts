@@ -3,6 +3,8 @@ import express from "express"
 import BodyParser from "body-parser"
 const router = require('./router/router')
 const app = express()
+const port_app = 4000
+const port_host = 3777
 import 'dotenv/config'
 
 (async () => {    
@@ -16,8 +18,10 @@ import 'dotenv/config'
         });
 
         // Custom code
-        app.listen(process.env.SERVER_PORT, () => {
-            console.log(`Listening on http://localhost:${process.env.SERVER_PORT}`);            
+        app.listen(port_app, () => {
+            console.log('weee !!!');
+            
+            console.log(`Listening!! on http://localhost:${port_host}`);            
         });
 
     } catch(error) {
