@@ -1,12 +1,12 @@
 {
-  "name": "fastify",
+  "name": "express",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "start-dev": "nodemon --watch src src/index.ts",
-    "start-prod": "tsc -p tsconfig.json && node build/index.js"
+    "start-local": "npx nodemon -L src/index.ts",
+    "start-dev": "tsc -p tsconfig.json && node build/index.js"
   },
   "keywords": [],
   "author": "",
