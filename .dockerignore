@@ -7,3 +7,4 @@ rsconnect/
 .Rproj.user
 node_modules
 npm-debug.log
+build

@@ -19,7 +19,7 @@ import 'dotenv/config'
 
         // Custom code
         app.listen(port_app, () => {
-            console.log('weee !!!');
+            console.log('weee.!!!');
             
             console.log(`Listening!! on http://localhost:${port_host}`);            
         });
